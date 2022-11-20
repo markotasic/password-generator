@@ -1,5 +1,3 @@
-import './button.scss';
-
 interface ButtonProps
   extends React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,

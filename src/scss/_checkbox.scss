@@ -15,9 +15,9 @@
   user-select: none;
 
   &:hover {
-    color: white;
+    color: $white-color;
     .checkmark {
-      border-color: #a5ffaf;
+      border-color: $accent-color;
     }
   }
 }
@@ -35,24 +35,24 @@
 .checkmark {
   height: 2rem;
   width: 2rem;
-  background-color: #24232a;
-  border: 0.2rem solid #e4e3ea;
+  background-color: $secondary-color;
+  border: 0.2rem solid $secondary-text-color;
   position: relative;
 
   &:hover {
-    border-color: #a5ffaf;
+    border-color: $accent-color;
   }
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: #24232a;
+  background-color: $secondary-color;
 }
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #a5ffaf;
-  border-color: #a5ffaf;
+  background-color: $accent-color;
+  border-color: $accent-color;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -74,7 +74,7 @@
 .container .checkmark:after {
   width: 0.5rem;
   height: 1rem;
-  border: solid white;
+  border: solid $white-color;
   border-width: 0 0.3rem 0.3rem 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);

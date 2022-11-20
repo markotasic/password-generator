@@ -1,5 +1,3 @@
-import './checkbox.scss';
-
 interface CheckboxProps {
   name: string;
   placeholder: string;

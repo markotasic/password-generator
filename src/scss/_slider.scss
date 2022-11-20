@@ -5,7 +5,7 @@
     appearance: none;
     -webkit-appearance: none;
     height: 0.75rem;
-    background: #18171f;
+    background: $primary-color;
 
     &:hover {
       cursor: pointer;
@@ -16,7 +16,7 @@
       width: 2.5rem;
       height: 2.5rem;
       border-radius: 50%;
-      background: #e4e3ea;
+      background: $secondary-text-color;
       position: relative;
       cursor: pointer;
     }
@@ -25,18 +25,18 @@
       width: 2.5rem;
       height: 2.5rem;
       border-radius: 50%;
-      background: #e4e3ea;
+      background: $secondary-text-color;
       position: relative;
       cursor: pointer;
     }
 
     &::-webkit-slider-thumb:hover {
-      background: #18171f;
-      border: 0.2rem solid #a5ffaf;
+      background: $primary-color;
+      border: 0.2rem solid $accent-color;
     }
     &::-moz-range-thumb:hover {
-      background: #18171f;
-      border: 0.2rem solid #a5ffaf;
+      background: $primary-color;
+      border: 0.2rem solid $accent-color;
     }
   }
 }

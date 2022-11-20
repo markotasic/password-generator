@@ -29,15 +29,19 @@ const randomFunc: randomFuncProps = {
   symbol: getRandomSymbol,
 };
 
+type TypeKeys = 'lower' | 'upper' | 'number' | 'symbol';
+
+type CheckedType = Partial<Record<TypeKeys, boolean>>;
+
 export const generatePassword = (checkedState: boolean[], length: number) => {
   const [lower, upper, number, symbol] = checkedState;
   let generatedPassword = '';
-  const typesCount = checkedState.filter((value) => value === true).length;
-  const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(
-    (item) => Object.values(item)[0]
-  );
 
-  if (typesCount === 0) {
+  const checked: CheckedType[] = [{ lower }, { upper }, { number }, { symbol }];
+
+  const checkedTypes = checked.filter((item) => Object.values(item)[0]);
+
+  if (!checkedTypes.length) {
     return '';
   }
 
@@ -45,8 +49,8 @@ export const generatePassword = (checkedState: boolean[], length: number) => {
     generatedPassword += someValue;
   };
 
-  for (let i = 0; i < length; i += typesCount) {
-    typesArr.forEach((type) => {
+  for (let i = 0; i < length; i += checkedTypes.length) {
+    checkedTypes.forEach((type) => {
       const funcName = Object.keys(type)[0];
       generatePasswordHandler(
         randomFunc[funcName as keyof typeof randomFunc]()

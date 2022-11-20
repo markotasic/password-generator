@@ -1,0 +1,67 @@
+.password-generator {
+  &__input-container {
+    display: flex;
+    align-items: center;
+    background-color: $secondary-color;
+    padding: 2rem 3rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__input {
+    background-color: $secondary-color;
+    border: none;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $secondary-text-color;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: #4e4f56;
+    }
+  }
+
+  &__copy-icon {
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    margin-left: 1rem;
+    svg {
+      height: 100%;
+      path {
+        fill: $accent-color;
+      }
+    }
+    &:hover {
+      svg {
+        cursor: pointer;
+        path {
+          fill: $secondary-text-color;
+        }
+      }
+    }
+
+    &--alert {
+      position: absolute;
+      top: 5rem;
+      white-space: nowrap;
+      transform: translateX(-50%);
+      background-color: $secondary-text-color;
+      padding: 1rem 1.5rem;
+      font-size: 1.5rem;
+      width: fit-content;
+    }
+    &--oblique {
+      position: absolute;
+      content: '';
+      top: 4.2rem;
+      right: 0rem;
+      transform: rotate(45deg);
+      background-color: $secondary-text-color;
+      padding: 1rem;
+      line-height: 0;
+    }
+  }
+}

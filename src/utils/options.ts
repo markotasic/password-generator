@@ -1,4 +1,4 @@
-export enum Options {
+enum Options {
   lowercase = 'lowercase',
   uppercase = 'uppercase',
   number = 'number',

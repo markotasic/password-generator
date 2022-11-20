@@ -1,0 +1,23 @@
+.btn {
+  background-color: $accent-color;
+  border: 0.2rem solid $accent-color;
+  color: $secondary-color;
+  padding: 1rem;
+  width: 100%;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $accent-color;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    background-color: $primary-text-color;
+    border-color: $primary-text-color;
+
+    &:hover {
+      color: $secondary-color;
+      cursor: default;
+    }
+  }
+}

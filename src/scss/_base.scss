@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&display=swap');
+
+$primary-color: #131219;
+$secondary-color: #24232a;
+$accent-color: #a5ffaf;
+
+$primary-text-color: #616569;
+$secondary-text-color: #e4e3ea;
+$white-color: #ffffff;
+
+$weak-color: #ff0000;
+$medium-color: #f3cd76;
+$good-color: #a5ffaf;
+$strong-color: #00ff00;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  color: $primary-color;
+  background: $accent-color;
+}
+
+::selection {
+  color: $primary-color;
+  background: $accent-color;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: 500px) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 38%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $primary-color;
+  color: $primary-text-color;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button,
+input {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+.password-generator {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  &__title {
+    font-size: 2.5rem;
+  }
+}
